@@ -54,5 +54,5 @@ for doc_idx,path in enumerate(speechfiles):
 
 write = tex_preamble + tex_body + tex_postamble    
 
-with open ("tex/soteu-speeches.tex","w",encoding="utf-8") as f:
+with open ("tex/soteu_speeches.tex","w",encoding="utf-8") as f:
     f.write(write)
