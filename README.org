@@ -1,6 +1,5 @@
 * SOtEU Dataset
-This repository contains the State of the European Union speeches in machine (csv) and human (pdf) readable format.\\
-Download the latest release [[https://github.com/pournaki/soteu-dataset/releases][here]].
+This repository contains the State of the European Union speeches in machine (csv) and human (pdf) readable format. Download the latest release [[https://github.com/pournaki/soteu-dataset/releases][here]].
 
 ** Data collection
 The raw data is manually collected speech by speech from https://state-of-the-union.ec.europa.eu/ and pasted into single text-files in ~./txt/raw/~, along with the URL and date of access. 
