@@ -1,0 +1,26 @@
+* SOtEU Dataset
+This repository contains the State of the European Union speeches in machine (csv) and human (pdf) readable format.\\
+Download the latest release [[https://github.com/pournaki/soteu-dataset/releases][here]].
+
+** Data collection
+The raw data is manually collected speech by speech from https://state-of-the-union.ec.europa.eu/ and pasted into single text-files in ~./txt/raw/~, along with the URL and date of access. 
+
+** Processing
+The preambles (name of the speaker, date...) are removed and cleaned files saved in ~./txt/nopreamble/~. All speeches are combined into a single csv with the following columns, where ~doc_id~ is an integer going from 0 to N, where N is the number of speeches: 
+
+| doc_id | date | speaker | url | text |
+|--------+------+---------+-----+------|
+| int    | str  | str     | str | str  |
+
+This csv is built in Python created using 
+
+#+begin_src bash
+~ python src/speech2csv.py  
+#+end_src
+
+For reading convenience, the speeches are also saved as a pdf using
+
+#+begin_src bash
+~ python src/speech2tex.py  
+~ pdflatex tex/soteu-speeches.tex
+#+end_src
